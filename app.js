@@ -16,7 +16,7 @@ img:"/images/revolution.jpg",
 Date_of_publication:"2011",
 Publisher:"Rupa publications",
 Price:"240 Rs.",
-Description:"Novel"
+Description:"novel"
 
 },
 {
