@@ -8,8 +8,20 @@ var nav=[{
 },
 {title:'Authors',
 link:'/authors'
+},
+{title:'Login',
+ link:'/login'
+ },
+{title:'Addbooks',
+link:'/addbook'
 
-}];
+},
+ {title:'Signup',
+ link:'/register'
+ },
+
+
+];
 var books=[{Name:"Revolution Twenty 20",
 Author:"Chethan Bhagat",
 img:"/images/revolution.jpg",
@@ -162,13 +174,6 @@ img:"/images/malu.jpg"
 
 }];
 
-
-
-
-
-
-
-
 app.get('/',(req,res)=>{
     res.render('index',{nav});
 
@@ -184,6 +189,20 @@ app.get('/authors',(req,res)=>{
     
 
 });
+app.get('/addbook',(req,res)=>{
+    res.render('addbook',{nav,title:"Addbook"});
+    
+
+});
+app.get('/register',(req,res)=>{
+    res.render('register',{nav,title:"Signup"});
+    
+ });
+ app.get('/login',(req,res)=>{
+    res.render('login',{nav,title:"Login"});
+    
+ });
+
 app.get('/bookssingle/:id',(req,res)=>{
     const x=req.params.id;
     res.render('bookssingle',{nav,books,"book":books[x]});
