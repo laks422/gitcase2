@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="css/style.css">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title><%= title %></title>
+	
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -104,7 +104,7 @@
               <a class="story-title" href="#"><img alt="" src="<%= books[i].img %>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%= books[i].Name %></h3>
+              <h3><%= books[i].name %></h3>
               
               <div class="row">
                 <div class="col-xs-9">
@@ -115,7 +115,7 @@
                     <h4></h4>
                     <h4></h4>
 
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="/bookssingle/<%= i %>" class="text-muted">Read More</a></small>
+                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="/bookssingle/<%= books[i]._id %>" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>

@@ -8,7 +8,7 @@
     
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title><%= title %></title>
+    
 </head>
 <body>
     <h4><i>Addbooks here</i></h4>
@@ -16,38 +16,39 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-sm-6" style="margin-top: 55px">
-               <form action="" style="border: 1px solid rgb(194, 73, 73);padding: 30px">
+               <form action="/readbookApi" method="POST" style="border: 1px solid rgb(194, 73, 73);padding: 30px">
                    <div class="form-group row">
                    <label for="title" class="col-sm-3 col-form-label">Name</label>
                    <div class="col-sm-12">
-                   <input type="text" class="form-cotrol">
+                   <input type="text" class="form-cotrol" name="name">
                    </div>
                   </div>
                   <div class="form row">
                         <label for="author" class="col-sm-3 col-form-label">Author</label>
                         <div class="col-sm-12">
-                        <input type="text" class="form-cotrol">
+                        <input type="text" class="form-cotrol" name="author">
                         </div>
                        </div>
                        <div class="form row">
                             <label for="publisher" class="col-sm-3 col-form-label">Publisher</label>
                             <div class="col-sm-12">
-                            <input type="text" class="form-cotrol">
+                            <input type="text" class="form-cotrol" name="publisher">
                             </div>
                            </div>
                            <div class="form row">
                                 <label for="dop" class="col-sm-3 col-form-label">Date of publication</label>
                                 <div class="col-sm-12">
-                                <input type="date" name="dop" id="dop" class="form-control">
+                                <input type="date" name="date_of_publication" id="dop" class="form-control">
                                 </div>
                             </div> 
                            
                             <div class="form row">
                                 <label for="price" class="col-sm-3 col-form-label">Price</label>
                                 <div class="col-sm-12">
-                                 <input type="text">
+                                 <input type="text" name="price">
                                 </div>
                             </div>
+
                   <div class="form row">
                    <label for="description" class="col-sm-3 col-form-label">Description</label>
                    <div class="col-sm-12">
@@ -55,9 +56,16 @@
                   </div>
                   </div>   
                   <div class="form row">
+                    <label for="dop" class="col-sm-3 col-form-label">Image</label>
+                    <div class="col-sm-12">
+                    <input type="text" name="img" id="" class="form-control">
+                    </div>
+                </div> 
+               
+                  <div class="form row">
                     <div class="col-sm-8"></div> 
                       <div class="col-sm-6">   
-                      <button class="btn btn-success">Submit</button>
+                      <button type="submit" class="btn btn-success">Submit</button>
                       </div>
                   </div>
                </form>

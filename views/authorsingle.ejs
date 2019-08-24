@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <link rel="stylesheet" href="/css/style.css">
+    
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Storystrap Template</title>
+
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+		
 		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -28,22 +27,13 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <% for(var i=0;i<nav.length;i++){ %>
-
-         
-        <li>
-          <a href="<%= nav[i].link %>"><%= nav[i].title %></a>
-        </li>
-    <% } %>
-        <!-- <li>
-          <a href="#">Category</a>
-        </li>
-        <li>
-          <a href="#">Category</a>
-        </li>
-        <li>
-          <a href="#">Category</a>
-        </li> -->
+        
+            <% for(var i=0;i<nav.length;i++){ %>
+                    <li>
+                   <a href="<%= nav[i].link %>"><%= nav[i].title %></a>
+                  </li>
+            <% } %>
+        
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -63,7 +53,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1>Authors
+        <h1><%= title %>
           <p class="lead"></p>
         </h1>
       </div>
@@ -101,31 +91,32 @@
           
           
           
-          <!--/stories-->
-          
-              
-       
+         <!-- /stories-->
+      
           <div class="row">    
+              
+                  
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%= author.img %>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="<%= authors.img %>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%= author.Name %></h3>
-              
+
+              <h3><%= authors.name %></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default"><%= author.Dob %></span></h4><h4>
-                      <h4><%= author.Place %>  </h4>
-                
+                  <h4><span class="label label-default"><%= authors.place %></span></h4><h4>
+                  <p style="font-family:courier,'new courier';" class="text-muted"><%= authors.dob %></p>
+                  
+
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
               <br><br>
             </div>
           </div>
+   
           <hr>
-         
           
           <!-- <div class="row">    
             <br>
@@ -200,12 +191,12 @@
               </div>
               <br><br>
             </div>
-          </div> -->
-          <hr>
+          </div>
+          <hr>-->
           <!--/stories-->
           
           
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+          <!-- <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
         
           
         </div>
@@ -214,11 +205,11 @@
 	                                                
                                                       
    	</div><!--/col-12-->
-  </div>
+  <!-- </div>
 </div>
-                                                
+                                                 -->
                                                                                 
-<hr>
+<hr> 
 
 <div class="container" id="footer">
   <div class="row">
