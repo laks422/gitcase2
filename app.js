@@ -230,7 +230,7 @@ app.get('/bookssingle/:id',(req,res)=>{
    console.log(books);
    res.render('bookssingle',{nav,title:"Books",books:books[0]});
 
-})
+});
     
 });
 app.get('/authors',(req,res)=>{
