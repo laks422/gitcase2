@@ -7,7 +7,8 @@ var mongoose=require('mongoose');
 var bodyparser=require('body-parser');
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
- mongoose.connect("mongodb://localhost:27017/librarymon");
+// mongoose.connect("mongodb://localhost:27017/librarymon");
+ mongoose.connect("mongodb+srv://2ammuammu:<password>@cluster0-zdx0e.mongodb.net/test?retryWrites=true&w=majority");
 var BooktableModel=mongoose.model("booktable",{
     name:String,
     author:String,
@@ -203,7 +204,10 @@ app.get('/index',(req,res)=>{
 });
 app.get('/books',(req,res)=>{
     
-   const bookslink="http://localhost:3000/getdataApi";
+   //const bookslink="http://localhost:3000/getdataApi";
+   const bookslink="https://ictcasestudy2.herokuapp.com/getdataApi";
+   
+   
  
 
     request(bookslink,(error,response,body)=>
@@ -217,7 +221,8 @@ app.get('/books',(req,res)=>{
 app.get('/bookssingle/:id',(req,res)=>{
 
     const x=req.params.id;
-    const booksinglelink="http://localhost:3000/getsinglebookApi/"+x;
+    //const booksinglelink="http://localhost:3000/getsinglebookApi/"+x;
+    const booksinglelink="https://ictcasestudy2.herokuapp.com/getsinglebookApi/"+x;
 
     request(booksinglelink,(error,response,body)=>
 {
@@ -230,7 +235,8 @@ app.get('/bookssingle/:id',(req,res)=>{
 });
 app.get('/authors',(req,res)=>{
      
-    const authorlink="http://localhost:3000/getauthorApi";
+    //const authorlink="http://localhost:3000/getauthorApi";
+    const authorlink="https://ictcasestudy2.herokuapp.com/getauthorApi";
   
     request(authorlink,(error,response,body)=>{
         var authors=JSON.parse(body);
@@ -247,7 +253,8 @@ app.get('/authors',(req,res)=>{
 app.get('/authorsingle/:id',(req,res)=>{
 
     const x=req.params.id;
- const authorsinglelink="http://localhost:3000/getsingleauthorApi/"+x;
+ //const authorsinglelink="http://localhost:3000/getsingleauthorApi/"+x;
+ const authorsinglelink="https://ictcasestudy2.herokuapp.com/getsingleauthorApi/"+x;
 
 
     request(authorsinglelink,(error,response,body)=>
